@@ -1,0 +1,27 @@
+project:
+  name: "Gaming LiveOps Analytics"
+  version: "1.0.0"
+  description: "Real-time gaming analytics platform"
+
+database:
+  type: "duckdb"
+  path: "data/warehouse/gaming_analytics.duckdb"
+  memory_limit: "2GB"
+
+data_sources:
+  type: "synthetic"
+  
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  warehouse: "data/warehouse/"
+
+simulation:
+  n_players: 5000
+  n_days: 60
+  start_date: "2024-01-01"
+
+streamlit:
+  port: 8501
+  theme: "dark"
+  title: "Gaming LiveOps Dashboard"
